@@ -1,20 +1,11 @@
-# Ignore PyCharm project files
-.idea/
+# Ignore virtual environment
+.venv/
 
-# Ignore Python cache and virtual environment
+# Ignore database files
+*.sqlite
+*.db
+.db
+# Ignore compiled files
 __pycache__/
 *.pyc
 *.pyo
-*.pyd
-venv/
-env/
-
-# Ignore logs and environment variables
-*.log
-.env
-logs/
-
-*.sqlite3
-*.db
-
-.db
