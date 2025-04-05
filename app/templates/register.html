@@ -3,9 +3,16 @@
 {% block title %}Register{% endblock %}
 
 {% block content %}
+
+{% if error%}
+<div class="alert alert-danger" role="alert">
+    {{error}}
+</div>
+{% endif %}
     <div class="container mt-4">
         <h2>Register</h2>
-        <form method="post" action="/register">
+<form method="post" action="/users/register">
+
             <div class="mb-3">
                 <label for="username" class="form-label">Username</label>
                 <input type="text" class="form-control" id="username" name="username" required>

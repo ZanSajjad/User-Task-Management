@@ -11,7 +11,7 @@ class User(Base):
     email = Column(String, unique=True, index=True)
     hashed_password = Column(String)
 
-    # tasks = relationship("Task", back_populates="owner")
+    tasks = relationship("Task", back_populates="owner")
 
 class Task(Base):
     __tablename__ = "tasks"
@@ -24,4 +24,4 @@ class Task(Base):
     is_completed = Column(Boolean, default=False)
     owner_id = Column(Integer, ForeignKey("users.id"))
 
-    # owner = relationship("User", back_populates="tasks")
+    owner = relationship("User", back_populates="tasks")

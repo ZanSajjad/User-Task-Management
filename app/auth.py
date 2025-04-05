@@ -54,7 +54,7 @@ def get_current_user(request: Request, db: Session = Depends(get_db)):
 def get_authenticated_user(request: Request, db: Session = Depends(get_db)):
     user = get_current_user(request, db)
     if not user:
-        response = RedirectResponse(url="/login", status_code=303)
+        response = RedirectResponse(url="/users/login", status_code=303)
         response.set_cookie("flash_message", "You need to log in to access this page.")
         return response
     return user

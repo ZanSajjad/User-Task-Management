@@ -3,9 +3,14 @@
 {% block title %}Login{% endblock %}
 
 {% block content %}
+{% if error%}
+<div class="alert alert-danger" role="alert">
+    {{error}}
+</div>
+{% endif %}
     <div class="container mt-4">
         <h2>Login</h2>
-        <form method="post" action="/login">
+        <form method="post" action="/users/login">
             <div class="mb-3">
                 <label for="email" class="form-label">Email</label>
                 <input type="email" class="form-control" id="email" name="email" required>
