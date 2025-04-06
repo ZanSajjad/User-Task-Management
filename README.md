@@ -1,4 +1,9 @@
-pip install fastapi uvicorn
-pip install sqlalchemy sqlite3 jinja2
-pip install passlib python-jose[cryptography] pydantic
-
+pip install fastapi
+pip install uvicorn
+pip install sqlalchemy
+pip install sqlite3
+pip install jinja2
+pip install passlib
+pip install python-jose[cryptography]
+pip install pydantic
+pip install python-multipart
